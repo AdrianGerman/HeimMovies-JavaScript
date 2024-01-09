@@ -1,0 +1,19 @@
+{
+  "name": "heimmovies-javascript",
+  "version": "1.0.0",
+  "description": "basic proyect javascript and api rest",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianGerman/HeimMovies-JavaScript.git"
+  },
+  "author": "@AdrianGerman :)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdrianGerman/HeimMovies-JavaScript/issues"
+  },
+  "homepage": "https://github.com/AdrianGerman/HeimMovies-JavaScript#readme"
+}
