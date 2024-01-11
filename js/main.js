@@ -34,7 +34,7 @@ async function getTrendingMoviesPreview() {
   });
 }
 
-async function getCategegoriesPreview() {
+async function getCategoriesPreview() {
   const { data } = await api("genre/movie/list");
 
   const categories = data.genres;
@@ -56,6 +56,3 @@ async function getCategegoriesPreview() {
     previewCategoriesContainer.appendChild(categoryContainer);
   });
 }
-
-getTrendingMoviesPreview();
-getCategegoriesPreview();
