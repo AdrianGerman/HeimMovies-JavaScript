@@ -184,7 +184,8 @@ footer {
   margin-bottom: 16px;
 }
 
-header-arrow {
+.header-arrow {
+  color: var(--purple-medium-1);
   font-weight: var(--font-weight-text2);
   font-size: 36px;
   margin-bottom: 16px;
