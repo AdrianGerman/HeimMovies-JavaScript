@@ -613,4 +613,10 @@ footer {
     background-position: center;
     width: 20%;
   }
+
+  .genericList-container .movie-img {
+    margin-bottom: 100px;
+    width: 50%;
+    margin-left: 200px;
+  }
 }
