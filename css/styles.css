@@ -553,6 +553,7 @@ footer {
   /* Categories */
   .category-container {
     width: 30%;
+    display: flex;
   }
 
   .categoriesPreview-title {
@@ -568,5 +569,48 @@ footer {
 
   .category-title {
     font-size: 20px;
+  }
+
+  /* Movie Detail */
+  .movieDetail-container {
+    width: 100%;
+    height: 80%;
+  }
+
+  .movieDetail-title {
+    width: 80%;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .movieDetail-score {
+    font-size: 24px;
+  }
+
+  .movieDetail-description {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .relatedMovies-scrollContainer {
+    column-count: 4;
+    column-gap: 24px;
+    white-space: normal;
+    height: auto;
+    padding-bottom: 26px;
+    overflow-x: hidden;
+  }
+
+  /* Categories */
+  .category-container {
+    width: 10%;
+  }
+
+  .header-container--long {
+    margin-left: 700px;
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_bestv2/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 20%;
   }
 }
