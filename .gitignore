@@ -87,7 +87,7 @@ dist
 .vscode
 
 # secrets.js (API_KEY)
-js/secrets.js
+# js/secrets.js
 
 
 
