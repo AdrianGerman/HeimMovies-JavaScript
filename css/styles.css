@@ -45,11 +45,8 @@
   --font-weight-text2: 500;
 }
 
+body,
 html {
-  background-color: var(--gradient-2);
-}
-
-body {
   background-color: var(--fond);
   color: var(--text-color);
   font-family: var(--font-family-titles);
