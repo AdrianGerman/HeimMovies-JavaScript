@@ -36,6 +36,9 @@ function homePage() {
   console.log("Home!!");
 
   headerSection.classList.remove("header-container--long");
+  headerSection.classList.add("header-container--home");
+  logoMovil.classList.remove("inactive");
+  logoPC.classList.remove("inactive");
   headerSection.style.background = "";
   arrowBtn.classList.add("inactive");
   headerTitle.classList.remove("inactive");
@@ -55,6 +58,9 @@ function categoriesPage() {
   console.log("categories!!");
 
   headerSection.classList.remove("header-container--long");
+  headerSection.classList.remove("header-container--home");
+  logoMovil.classList.add("inactive");
+  logoPC.classList.add("inactive");
   headerSection.style.background = "";
   arrowBtn.classList.remove("inactive");
   arrowBtn.classList.remove("header-arrow--white");
@@ -80,6 +86,10 @@ function movieDetailsPage() {
   console.log("Movie!!");
 
   headerSection.classList.add("header-container--long");
+  headerSection.classList.remove("header-container--home");
+  logoMovil.classList.add("inactive");
+  logoPC.classList.add("inactive");
+
   // headerSection.style.background = "";
   arrowBtn.classList.remove("inactive");
   arrowBtn.classList.add("header-arrow--white");
@@ -101,6 +111,10 @@ function searchPage() {
   console.log("Search!!");
 
   headerSection.classList.remove("header-container--long");
+  headerSection.classList.remove("header-container--home");
+  logoMovil.classList.add("inactive");
+  logoPC.classList.add("inactive");
+
   headerSection.style.background = "";
   arrowBtn.classList.remove("inactive");
   arrowBtn.classList.remove("header-arrow--white");
@@ -122,6 +136,10 @@ function trendsPage() {
   console.log("TRENDS!!");
 
   headerSection.classList.remove("header-container--long");
+  headerSection.classList.remove("header-container--home");
+  logoMovil.classList.add("inactive");
+  logoPC.classList.add("inactive");
+
   headerSection.style.background = "";
   arrowBtn.classList.remove("inactive");
   arrowBtn.classList.remove("header-arrow--white");

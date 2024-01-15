@@ -4,6 +4,8 @@ const trendingPreviewSection = document.querySelector("#trendingPreview");
 const categoriesPreviewSection = document.querySelector("#categoriesPreview");
 const genericSection = document.querySelector("#genericList");
 const movieDetailSection = document.querySelector("#movieDetail");
+const logoMovil = document.querySelector(".logo-movil");
+const logoPC = document.querySelector(".logo");
 
 // Lists & Containers
 const searchForm = document.querySelector("#searchForm");
