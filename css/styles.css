@@ -221,7 +221,6 @@ footer {
 
 .header-searchForm input {
   height: 48px;
-  width: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
@@ -618,5 +617,13 @@ footer {
     margin-bottom: 100px;
     width: 50%;
     margin-left: 200px;
+  }
+
+  .trendingPreview-movieList .movie-container .movie-img {
+    margin-bottom: 20px;
+  }
+
+  .header-searchForm {
+    width: 100%;
   }
 }
