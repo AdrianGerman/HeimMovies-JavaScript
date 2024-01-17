@@ -60,7 +60,6 @@ body {
 }
 
 /* etiquetas html */
-
 h1,
 h2,
 h3 {
@@ -135,6 +134,26 @@ footer {
   cursor: pointer;
 }
 
+.movie-container--loading {
+  background-color: var(--gradient-3);
+  border-radius: 8px;
+  height: 225px;
+  min-height: 225px;
+  max-height: 225px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  margin-bottom: 15px;
+  animation: loading-skeleton infinite 1.5s;
+}
+
+.movie-container--loading:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.movie-container--loading:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
 .movie-img {
   border-radius: 8px;
 }
@@ -148,19 +167,36 @@ footer {
   flex-wrap: wrap;
 }
 
+.category-container--loading {
+  background: var(--gradient-3);
+  border-radius: 8px;
+  height: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  margin-bottom: 15px;
+  animation: loading-skeleton infinite 1.5s;
+}
+
+.category-container--loading:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
 /* Header */
 .header-container {
   padding-top: 40px;
 }
 
 .header-container--long {
-  background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_bestv2/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg");
+  background-image: url("../img/loading-detail.png");
   background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.35) 19.27%,
       rgba(0, 0, 0, 0) 29.17%
     ),
-    url(https://www.themoviedb.org/t/p/w600_and_h900_bestv2/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg);
+    url(../img/loading-detail.png);
   background-size: cover !important;
   height: 480px;
   position: fixed;
@@ -424,11 +460,21 @@ footer {
   white-space: nowrap;
   width: calc(100vw - 24px);
   padding-bottom: 16px;
+  max-height: 225px;
 }
 
 .relatedMovies-scrollContainer .movie-container {
   display: inline-block;
   margin-right: 8px;
+}
+
+.relatedMovies-scrollContainer .movie-container--loading {
+  width: 125px;
+  min-width: 125px;
+  max-width: 125px;
+  height: 187.5px;
+  min-height: 187.5px;
+  max-height: 187.5px;
 }
 
 .relatedMovies-scrollContainer .movie-img {
@@ -454,6 +500,17 @@ footer {
 
 .inactive {
   display: none;
+}
+
+/* Animations */
+@keyframes loading-skeleton {
+  0%,
+  100% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
 }
 
 @media screen and (max-width: 900px) {

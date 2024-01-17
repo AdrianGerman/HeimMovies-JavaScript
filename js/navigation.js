@@ -51,7 +51,7 @@ function homePage() {
   movieDetailSection.classList.add("inactive");
 
   getTrendingMoviesPreview();
-  getCategoriesPreview();
+  getCategegoriesPreview();
 }
 
 function categoriesPage() {
