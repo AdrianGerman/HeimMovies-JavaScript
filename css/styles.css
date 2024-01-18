@@ -581,6 +581,7 @@ footer {
 
   .movie-img {
     border-radius: 8px;
+    min-height: 175px;
   }
 
   h2 {

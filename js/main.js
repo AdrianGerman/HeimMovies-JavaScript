@@ -38,6 +38,12 @@ function createMovies(movies, container, LazyLoad = false) {
       LazyLoad ? "data-img" : "src",
       "https://image.tmdb.org/t/p/w300" + movie.poster_path
     );
+    movieImg.addEventListener("error", () => {
+      movieImg.setAttribute(
+        "src",
+        "https://img.freepik.com/vector-gratis/plantilla-plana-error-404_23-2147746980.jpg?w=826&t=st=1705591306~exp=1705591906~hmac=19b6f6f915abb96150ee837eb09ebd13a8a7b42a1d329d3eac638e050e41badf"
+      );
+    });
 
     if (LazyLoad) {
       LazyLoader.observe(movieImg);
@@ -94,7 +100,7 @@ async function getMoviesByCategory(id) {
   });
   const movies = data.results;
 
-  createMovies(movies, genericSection);
+  createMovies(movies, genericSection, true);
 }
 
 async function getMoviesBySearch(query) {
