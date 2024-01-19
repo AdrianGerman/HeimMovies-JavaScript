@@ -21,8 +21,14 @@ const LazyLoader = new IntersectionObserver((entries) => {
   });
 });
 
-function createMovies(movies, container, LazyLoad = false) {
-  container.innerHTML = "";
+function createMovies(
+  movies,
+  container,
+  { LazyLoad = false, clean = true } = {}
+) {
+  if (clean) {
+    container.innerHTML = "";
+  }
 
   movies.forEach((movie) => {
     const movieContainer = document.createElement("div");
@@ -118,7 +124,31 @@ async function getTrendingMovies() {
   const { data } = await api("trending/movie/day");
   const movies = data.results;
 
-  createMovies(movies, genericSection);
+  createMovies(movies, genericSection, { LazyLoad: true, clean: true });
+
+  const btnLoadMore = document.createElement("button");
+  btnLoadMore.innerText = "Cargar más";
+  btnLoadMore.addEventListener("click", getPaginatedTrendingMovies);
+  genericSection.appendChild(btnLoadMore);
+}
+
+let page = 1;
+
+async function getPaginatedTrendingMovies() {
+  page++;
+  const { data } = await api("trending/movie/day", {
+    params: {
+      page,
+    },
+  });
+  const movies = data.results;
+
+  createMovies(movies, genericSection, { lazyLoad: true, clean: false });
+
+  const btnLoadMore = document.createElement("button");
+  btnLoadMore.innerText = "Cargar más";
+  btnLoadMore.addEventListener("click", getPaginatedTrendingMovies);
+  genericSection.appendChild(btnLoadMore);
 }
 
 async function getMovieById(id) {
