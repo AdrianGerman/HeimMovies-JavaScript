@@ -1,3 +1,4 @@
+// Data
 const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
 
@@ -10,8 +11,32 @@ const api = axios.create({
   },
 });
 
-// Utils
+function likedMoviesList() {
+  const item = JSON.parse(localStorage.getItem("liked_movies"));
+  let movies;
 
+  if (item) {
+    movies = item;
+  } else {
+    movies = {};
+  }
+  return movies;
+}
+
+function likedMovie(movie) {
+  // movie.id
+  const likedMovies = likedMoviesList();
+
+  if (likedMovies[movie.id]) {
+    likedMovies[movie.id] = undefined;
+  } else {
+    likedMovies[movie.id] = movie;
+  }
+
+  localStorage.setItem("liked_movies", JSON.stringify(likedMovies));
+}
+
+// Utils
 const LazyLoader = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -55,7 +80,7 @@ function createMovies(
     movieBtn.classList.add("movie-btn");
     movieBtn.addEventListener("click", () => {
       movieBtn.classList.toggle("movie-btn--liked");
-      // local storage
+      likedMovie(movie);
     });
 
     if (LazyLoad) {
@@ -90,7 +115,6 @@ function createCategories(categories, container) {
 }
 
 // Llamados a la API
-
 async function getTrendingMoviesPreview() {
   const { data } = await api("trending/movie/day");
   const movies = data.results;
