@@ -441,6 +441,7 @@ footer {
 
 .genericList-container .movie-img {
   width: 100%;
+  height: 400px;
 }
 
 /* Movie Detail */
@@ -708,6 +709,7 @@ footer {
     margin-bottom: 100px;
     width: 50%;
     margin-left: 200px;
+    height: auto;
   }
 
   .trendingPreview-movieList .movie-container .movie-img {
