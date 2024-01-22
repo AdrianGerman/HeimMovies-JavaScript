@@ -84,6 +84,7 @@ function createMovies(
     movieBtn.addEventListener("click", () => {
       movieBtn.classList.toggle("movie-btn--liked");
       likedMovie(movie);
+      getLikedMovies(); // para se que refleje en tiempo real los favoritos sin necesidad de recargar
     });
 
     if (LazyLoad) {
