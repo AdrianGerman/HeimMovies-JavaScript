@@ -6,6 +6,7 @@ const genericSection = document.querySelector("#genericList");
 const movieDetailSection = document.querySelector("#movieDetail");
 const logoMovil = document.querySelector(".logo-movil");
 const logoPC = document.querySelector(".logo");
+const likedMoviesSection = document.querySelector("#liked");
 
 // Lists & Containers
 const searchForm = document.querySelector("#searchForm");
@@ -19,6 +20,7 @@ const movieDetailCategoriesList = document.querySelector(
 const relatedMoviesContainer = document.querySelector(
   ".relatedMovies-scrollContainer"
 );
+const likedMoviesListArticle = document.querySelector(".liked-movieList");
 
 // Elements
 const headerTitle = document.querySelector(".header-title");
