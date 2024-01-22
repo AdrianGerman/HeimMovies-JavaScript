@@ -148,7 +148,10 @@ function searchPage() {
   movieDetailSection.classList.add("inactive");
 
   // ["#search", "Heim"]
-  const [_, query] = location.hash.split("=");
+  let query = location.hash.split("=")[1];
+  query = query.replaceAll("%20", " ");
+  console.log("Lo que buscaste: " + query);
+
   getMoviesBySearch(query);
 
   infiniteScroll = getPaginateMoviesBySearch(query);

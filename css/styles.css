@@ -265,7 +265,7 @@ footer {
   color: var(--purple-medium-1);
   font-weight: var(--font-weight-text2);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 56px;
   margin-bottom: 16px;
   cursor: pointer;
   display: inline-block;
@@ -441,7 +441,6 @@ footer {
 
 .genericList-container .movie-img {
   width: 100%;
-  height: 400px;
 }
 
 /* Movie Detail */

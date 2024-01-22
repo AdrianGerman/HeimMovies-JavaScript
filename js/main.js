@@ -171,12 +171,11 @@ function getPaginatedMoviesByCategory(id) {
 async function getMoviesBySearch(query) {
   const { data } = await api("search/movie", {
     params: {
-      query: decodeURI(query),
+      query,
     },
   });
   const movies = data.results;
   maxPage = data.total_pages;
-  console.log(maxPage);
 
   createMovies(movies, genericSection);
 }
