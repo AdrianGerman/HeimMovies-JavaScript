@@ -515,13 +515,14 @@ footer {
 }
 
 .nothing {
-  font-weight: 700;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  text-align: right;
+  font-weight: 700;
   margin-top: 80px;
   background: var(--gradient-2);
   padding: 20px;
-  margin-left: 80px;
+  width: 100%;
 }
 
 /* Footer */
