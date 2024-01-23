@@ -4,8 +4,8 @@ const trendingPreviewSection = document.querySelector("#trendingPreview");
 const categoriesPreviewSection = document.querySelector("#categoriesPreview");
 const genericSection = document.querySelector("#genericList");
 const movieDetailSection = document.querySelector("#movieDetail");
-const logoMovil = document.querySelector(".logo-movil");
-const logoPC = document.querySelector(".logo");
+// const logoMovil = document.querySelector(".logo-movil");
+const logo = document.querySelector(".logo");
 const likedMoviesSection = document.querySelector("#liked");
 
 // Lists & Containers

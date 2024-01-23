@@ -51,8 +51,8 @@ function homePage() {
 
   headerSection.classList.remove("header-container--long");
   headerSection.classList.add("header-container--home");
-  logoMovil.classList.remove("inactive");
-  logoPC.classList.remove("inactive");
+  // logoMovil.classList.remove("inactive");
+  logo.classList.remove("inactive");
   headerSection.style.background = "";
   arrowBtn.classList.add("inactive");
   headerTitle.classList.remove("inactive");
@@ -75,8 +75,8 @@ function categoriesPage() {
 
   headerSection.classList.remove("header-container--long");
   headerSection.classList.remove("header-container--home");
-  logoMovil.classList.add("inactive");
-  logoPC.classList.add("inactive");
+  // logoMovil.classList.add("inactive");
+  logo.classList.add("inactive");
   headerSection.style.background = "";
   arrowBtn.classList.remove("inactive");
   arrowBtn.classList.remove("header-arrow--white");
@@ -105,8 +105,8 @@ function movieDetailsPage() {
 
   headerSection.classList.add("header-container--long");
   headerSection.classList.remove("header-container--home");
-  logoMovil.classList.add("inactive");
-  logoPC.classList.add("inactive");
+  // logoMovil.classList.add("inactive");
+  logo.classList.add("inactive");
 
   // headerSection.style.background = "";
   arrowBtn.classList.remove("inactive");
@@ -131,8 +131,8 @@ function searchPage() {
 
   headerSection.classList.remove("header-container--long");
   headerSection.classList.remove("header-container--home");
-  logoMovil.classList.add("inactive");
-  logoPC.classList.add("inactive");
+  // logoMovil.classList.add("inactive");
+  logo.classList.add("inactive");
 
   headerSection.style.background = "";
   arrowBtn.classList.remove("inactive");
@@ -162,8 +162,8 @@ function trendsPage() {
 
   headerSection.classList.remove("header-container--long");
   headerSection.classList.remove("header-container--home");
-  logoMovil.classList.add("inactive");
-  logoPC.classList.add("inactive");
+  // logoMovil.classList.add("inactive");
+  logo.classList.add("inactive");
 
   headerSection.style.background = "";
   arrowBtn.classList.remove("inactive");
