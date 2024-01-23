@@ -319,6 +319,10 @@ footer {
   padding-bottom: 16px;
 }
 
+.liked-title {
+  margin: 0 0 10px 0;
+}
+
 .trendingPreview-movieList .movie-container,
 .liked-movieList .movie-container {
   display: inline-block;

@@ -260,20 +260,37 @@ async function getMovieById(id) {
 }
 
 async function getRelatedMoviesId(id) {
-  const { data } = await api(`movie/${id}/recommendations`);
-  const relatedMovies = data.results;
+  try {
+    const { data } = await api(`movie/${id}/recommendations`);
+    const relatedMovies = data.results;
 
-  createMovies(relatedMovies, relatedMoviesContainer);
+    if (relatedMovies.length === 0) {
+      // Si no hay películas relacionadas, mostrar un mensaje
+      console.log("No hay películas similares disponibles.");
+    } else {
+      // Si hay películas relacionadas, crear elementos HTML y agregar al contenedor
+      createMovies(relatedMovies, relatedMoviesContainer);
+    }
+  } catch (error) {
+    // Manejar errores de la llamada a la API, por ejemplo, mostrar un mensaje de error
+    console.error("Error al obtener películas relacionadas:", error.message);
+  }
 }
 
 function getLikedMovies() {
   const likedMovies = likedMoviesList();
   const moviesArray = Object.values(likedMovies);
 
-  createMovies(moviesArray, likedMoviesListArticle, {
-    lazyLoad: true,
-    clean: true,
-  });
+  // Verificar si hay películas en favoritos antes de crear y mostrar las películas
+  if (moviesArray.length > 0) {
+    createMovies(moviesArray, likedMoviesListArticle, {
+      lazyLoad: true,
+      clean: true,
+    });
 
-  console.log(likedMovies);
+    likedMoviesSection.classList.remove("inactive");
+    console.log(likedMovies);
+  } else {
+    likedMoviesSection.classList.add("inactive");
+  }
 }
