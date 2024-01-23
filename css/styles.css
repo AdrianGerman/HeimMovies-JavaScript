@@ -514,6 +514,16 @@ footer {
   max-height: 187.5px;
 }
 
+.nothing {
+  font-weight: 700;
+  text-align: center;
+  text-align: right;
+  margin-top: 80px;
+  background: var(--gradient-2);
+  padding: 20px;
+  margin-left: 80px;
+}
+
 /* Footer */
 footer {
   background-color: var(--gradient-2);

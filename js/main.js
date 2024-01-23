@@ -260,21 +260,26 @@ async function getMovieById(id) {
 }
 
 async function getRelatedMoviesId(id) {
-  try {
-    const { data } = await api(`movie/${id}/recommendations`);
-    const relatedMovies = data.results;
+  const { data } = await api(`movie/${id}/recommendations`);
+  const relatedMovies = data.results;
 
-    if (relatedMovies.length === 0) {
-      // Si no hay películas relacionadas, mostrar un mensaje
-      console.log("No hay películas similares disponibles.");
-    } else {
-      // Si hay películas relacionadas, crear elementos HTML y agregar al contenedor
-      createMovies(relatedMovies, relatedMoviesContainer);
-    }
-  } catch (error) {
-    // Manejar errores de la llamada a la API, por ejemplo, mostrar un mensaje de error
-    console.error("Error al obtener películas relacionadas:", error.message);
+  const relatedMoviesContainer = document.querySelector(
+    ".relatedMovies-scrollContainer"
+  );
+
+  // Limpiar el contenedor antes de agregar nuevas películas
+  relatedMoviesContainer.innerHTML = "";
+
+  if (relatedMovies.length === 0) {
+    const noMoviesMessage = document.createElement("p");
+    noMoviesMessage.classList.add("nothing");
+    noMoviesMessage.id = "not-pelis";
+    noMoviesMessage.textContent = "No hay películas similares que mostrar";
+    relatedMoviesContainer.appendChild(noMoviesMessage);
+    return; // Salir de la función si no hay películas similares
   }
+
+  createMovies(relatedMovies, relatedMoviesContainer);
 }
 
 function getLikedMovies() {
