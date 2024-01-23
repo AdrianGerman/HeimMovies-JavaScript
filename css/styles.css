@@ -242,24 +242,14 @@ footer {
 }
 
 .header-container--home {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   justify-content: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
 }
 
 .header-title {
   font-size: 32px;
-  margin-bottom: 16px;
-}
-
-.logo-movil {
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .header-arrow {
@@ -549,7 +539,11 @@ footer {
 
 @media screen and (max-width: 900px) {
   .logo {
-    display: none;
+    width: 64px;
+    height: 44px;
+    /* margin-bottom: 60px; */
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -589,11 +583,6 @@ footer {
   .logo {
     width: 300px;
     height: 200px;
-    margin-bottom: 80px;
-  }
-
-  .logo-movil {
-    display: none;
   }
 
   .trendingPreview-movieList {
