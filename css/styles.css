@@ -589,6 +589,8 @@ footer {
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
+    background-color: var(--gradient-2);
+    padding-bottom: 60px;
   }
 
   #searchBtn {
@@ -605,6 +607,12 @@ footer {
     column-gap: 24px;
     white-space: normal;
     height: auto;
+    padding-bottom: 26px;
+    overflow-x: hidden;
+  }
+
+  .liked-movieList {
+    column-gap: 24px;
     padding-bottom: 26px;
     overflow-x: hidden;
   }
@@ -724,7 +732,7 @@ footer {
     width: 100%;
   }
 
-  .movie-btn {
+  .genericList-container button {
     right: 250px;
   }
 }
